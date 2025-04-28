@@ -1,0 +1,69 @@
+body {
+    font-family: 'Poppins', sans-serif;
+  }
+  #nav-links {
+    transition: all 0.5s ease;
+  }
+  @media (max-width: 1024px) {
+    /* زيادة المسافة بين النافبار والمحتوى عند تصغير الشاشة */
+    #home {
+        padding-top: 120px; /* يمكنك تعديل المسافة حسب الحاجة */
+    }
+}
+
+@media (max-width: 768px) {
+    /* زيادة المسافة بين النافبار والمحتوى أكثر في الأجهزة الصغيرة */
+    #home {
+        padding-top: 140px;
+    }
+}
+
+#home img {
+    width: 100%;
+    height: 350px;
+    max-width: 250px; /* الحد الأقصى لعرض الصورة */
+    margin: 0 auto; /* توسيط الصورة */
+    display: block; /* جعل الصورة كتلة لتوسيع المساحة */
+}
+
+/* زر العودة إلى الأعلى */
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 30px; /* رفع الزر ليكون بعيدًا قليلاً عن الحافة السفلية */
+    right: 30px; /* رفع الزر ليكون بعيدًا قليلاً عن الحافة الجانبية */
+    background-color: #1D4ED8; /* اللون الأزرق الفاتح */
+    color: white;
+    padding: 16px;
+    border-radius: 50%; /* جعله دائريًا */
+    font-size: 24px;
+    display: none; /* مخفي في البداية */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* الظل */
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+/* تأثير عند المرور فوق الزر */
+#scrollToTopBtn:hover {
+    background-color: #2563EB; /* اللون الأزرق الداكن */
+    transform: scale(1.1); /* تكبير الزر */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* زيادة الظل */
+}
+
+/* تأثير عند الضغط على الزر */
+#scrollToTopBtn:active {
+    transform: scale(0.95); /* تصغير الزر عند الضغط */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* ظل أخف عند الضغط */
+}
+
+/* تأثير الفوكوس */
+#scrollToTopBtn:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(38, 143, 255, 0.5); /* تأثير الفوكوس عند التركيز */
+}
+
+/* تأثير عند عرض الزر */
+#scrollToTopBtn.show {
+    display: block !important; /* يظهر الزر */
+}
+
